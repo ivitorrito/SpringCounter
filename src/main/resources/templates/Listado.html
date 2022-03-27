@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layout/layout}">
+    <head th:replace="layout/layout :: head">
+
+        <meta charset="UTF-8">
+                <title></title>
+       
+    </head>
+    <body>
+        <div class="container-fluid" layout:fragment="page-content">
+            <h1 th:text="${mensaje}"></h1><br>
+            
+            
+            </br>
+             
+             
+             
+<table class="table caption-top table-secondary table-bordered" >
+  <caption></caption>
+  <thead>
+    <tr>
+       
+      <th scope="col">IP</th>
+      <th scope="col">MODELO</th>
+      <th scope="col">NUMERO DE SERIE</th>
+      <th scope="col">UBICACION</th>
+      <th scope="col-auto"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">192.168.1.69</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      
+      <td> <button class="btn btn-secondary  me-md-4 " >Ver</button><button class="btn btn-secondary  me-md-4" >Eliminar</button><button class="btn btn-secondary  me-md-4"  >Editar</button></td>
+   
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+  
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td> <button >Ver</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+      <td> <button >Ver</button></td>
+    </tr>
+  </tbody>
+</table>
+
+     
+                </div>
+        <!--OTRO SCRIPTS PARA PAGINAS-->
+<th:block layout:fragment="page-scripts">
+
+</th:block>
+        
+    </body>
+</html>
