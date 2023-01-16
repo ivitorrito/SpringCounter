@@ -10,14 +10,14 @@ public class HomeController {
     
     @GetMapping("/")
     public String goHome(Model model){
-        model.addAttribute("titulo", "welcome");
+        model.addAttribute("titulo", "Hola");
     return "inicio";
     }
     
-    @GetMapping("/AgregaMaquinas")
-    public String AgregaMaquinas(Model model){
+    @GetMapping("/Presupuestos")
+    public String Presupuestos(Model model){
    
-    return "AgregaMaquinas";
+    return "Presupuestos";
     }
     
     @GetMapping("/Listado")
