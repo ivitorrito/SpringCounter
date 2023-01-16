@@ -1,113 +1,113 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorate="~{layout/layout}">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
     <head th:replace="layout/layout :: head">
 
         <meta charset="UTF-8">
-                <title></title>
-       
+        <title></title>
+
     </head>
     <body>
         <div class="col-sm-5" layout:fragment="page-content">
-             
-       <form>
-  <div class="form-group">
-     
-      <div class="d-inline p-2 bg-primary text-white">
-  <strong>Atención!!!</strong> Acuerdate de guardar el archivo generado
-</div>
-      <br></br>
-    <label  for="formGroupExampleInput" class="col-sm-5  input-group-sm text-center p-1 mb-1 bg-black text-white " >Nombre del cliente</label>
-    <input th:leaf="nombre" placeholder="Nombre del Cliente">
-    <br></br>
-     <div class="form-group">
-    <label for="exampleFormControlSelect2"class="col-sm-5  col-form-label-sm text-center p-1 mb-1 bg-black text-white">Modelo de Maquina</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>C454e</option>
-      <option>C364e</option>
-      <option>C224e</option>
-      <option>C458</option>
-      <option>C368</option>
-      <option>C308</option>
-      <option>C554e</option>
-    </select>
-  </div>
-    <br><br>
-     <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white " >Precio</label>
-     
-     <input    placeholder="Precio" >
-    <br></br>
-    <input type="checkbox" name="active" class="col-form-label-sm" />
-     <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white " >Descuento por Recompra</label>
-    
-     <input    placeholder="recompra" >
-    <br></br>
-    <input type="checkbox"  name="active" class="col-form-label-sm" />
-   <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Descuento por nuevo cliente</label>
-   
-   <input   placeholder="descuento" >
-   <br></br>
-    <input type="checkbox" name="active" class="col-form-label-sm" />
-   <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Rentig</label>
-   <br></br>
-   <input  class="col-auto"  placeholder="Meses" >
-   <input  class="col-auto"  placeholder="Precio" >
-   <br></br>
-   <input type="checkbox" name="active" class="col-form-label-sm" />
-   <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Alquiler</label>
-   <br></br>
-   <input  class="col-auto"  placeholder="Precio" >
-   <br></br>
-   <input type="checkbox" name="active" class="col-form-label-sm" />
-   <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Precio de la Maquina</label>
-   <br></br>
-   <input  class="col-auto"  placeholder="Precio" >
-   <br></br>
-   <input type="checkbox" name="active" class="col-form-label-sm" />
-   <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Precio Copia en Color</label>
-   <br></br>
-   <input  class="col-auto"  placeholder="Precio" >
-   <br></br>
-   <input type="checkbox" name="active" class="col-form-label-sm" />
-   <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Precio Copia en Negro</label>
-   <br></br>
-   <input  class="col-auto"  placeholder="Precio" >
-   <br></br>
-   <input type="checkbox" name="active" class="col-form-label-sm" />
-   <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >garantia en meses</label>
-   <br></br>
-   <input  class="col-auto"  placeholder="Meses" >
-   <br></br>
-   <input type="checkbox" name="active" class="col-form-label-sm" />
-   <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Otros descuentos</label>
-   <br></br>
-   <input  class="col-auto"  placeholder="Tipo de descuento" >
-   <input  class="col-auto"  placeholder="Precio" >
-   
-   
-  </div>
-    
-           <div>
-               </div>
-            <br></br>
-           
-<button type="button" class="btn-light btn-success">Cear PDF</button>
+
+            <form>
+                <div class="form-group">
+
+                    <div class="d-inline p-2 bg-primary text-white">
+                        <strong>Atención!!!</strong> Acuerdate de guardar el archivo generado
+                    </div>
+                    <br></br>
+                    <label  for="formGroupExampleInput" class="col-sm-5  input-group-sm text-center p-1 mb-1 bg-black text-white " >Nombre del cliente</label>
+                    <input  th:field="*{nombre}" placeholder="Nombre del Cliente">
+                    <br></br>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2"class="col-sm-5  col-form-label-sm text-center p-1 mb-1 bg-black text-white">Modelo de Maquina</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>C454e</option>
+                            <option>C364e</option>
+                            <option>C224e</option>
+                            <option>C458</option>
+                            <option>C368</option>
+                            <option>C308</option>
+                            <option>C554e</option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white " >Precio</label>
+
+                    <input    placeholder="Precio" >
+                    <br></br>
+                    <input type="checkbox" name="active" class="col-form-label-sm" />
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white " >Descuento por Recompra</label>
+
+                    <input    placeholder="recompra" >
+                    <br></br>
+                    <input type="checkbox"  name="active" class="col-form-label-sm" />
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Descuento por nuevo cliente</label>
+
+                    <input   placeholder="descuento" >
+                    <br></br>
+                    <input type="checkbox" name="active" class="col-form-label-sm" />
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Rentig</label>
+                    <br></br>
+                    <input  class="col-auto"  placeholder="Meses" >
+                    <input  class="col-auto"  placeholder="Precio" >
+                    <br></br>
+                    <input type="checkbox" name="active" class="col-form-label-sm" />
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Alquiler</label>
+                    <br></br>
+                    <input  class="col-auto"  placeholder="Precio" >
+                    <br></br>
+                    <input type="checkbox" name="active" class="col-form-label-sm" />
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Precio de la Maquina</label>
+                    <br></br>
+                    <input  class="col-auto"  placeholder="Precio" >
+                    <br></br>
+                    <input type="checkbox" name="active" class="col-form-label-sm" />
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Precio Copia en Color</label>
+                    <br></br>
+                    <input  class="col-auto"  placeholder="Precio" >
+                    <br></br>
+                    <input type="checkbox" name="active" class="col-form-label-sm" />
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Precio Copia en Negro</label>
+                    <br></br>
+                    <input  class="col-auto"  placeholder="Precio" >
+                    <br></br>
+                    <input type="checkbox" name="active" class="col-form-label-sm" />
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >garantia en meses</label>
+                    <br></br>
+                    <input  class="col-auto"  placeholder="Meses" >
+                    <br></br>
+                    <input type="checkbox" name="active" class="col-form-label-sm" />
+                    <label for="formGroupExampleInput" class="col-sm-5 col-form-label col-form-label-sm text-center p-1 mb-1 bg-primary text-white" >Otros descuentos</label>
+                    <br></br>
+                    <input  class="col-auto"  placeholder="Tipo de descuento" >
+                    <input  class="col-auto"  placeholder="Precio" >
 
 
-
-  
- 
-  
- 
-</form>
-            
-            
                 </div>
-        <!--OTRO SCRIPTS PARA PAGINAS-->
-<th:block layout:fragment="page-scripts">
 
-</th:block>
-        
-    </body>
+                <div>
+                </div>
+                <br></br>
+
+                <button type="submit" class="btn-light btn-success">Cear PDF</button>
+
+
+
+
+
+
+
+            </form>
+
+
+        </div>
+        <!--OTRO SCRIPTS PARA PAGINAS-->
+    <th:block layout:fragment="page-scripts">
+
+    </th:block>
+
+</body>
 </html>

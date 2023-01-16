@@ -1,7 +1,7 @@
 
 package com.example.demo.Controller;
 
-import com.example.demo.Pdf;
+import com.example.demo.Cliente;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,12 +17,9 @@ public class HomeController {
     
     @GetMapping("/Presupuestos")
     public String Presupuestos(Model model){
-      Pdf pdf = new Pdf();
-      String nombre = pdf.nombre;
-        model.addAttribute("nombre");
-      model.getAttribute(nombre);
+       
+      
         
-        System.out.println(nombre);
     return "Presupuestos";
     }
     
